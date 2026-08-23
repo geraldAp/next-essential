@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Install
+        run: yarn install --immutable
+      - name: Lint
+        run: yarn lint
+        continue-on-error: true
+      - name: Build
+        run: yarn build
+        env:
+          SESSION_PASSWORD: complex_password_at_least_32_characters_long_ci_only
