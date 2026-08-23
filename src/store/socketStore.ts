@@ -55,7 +55,7 @@ export const useSocketStore = create<SocketState>((set) => ({
 }));
 
 const updateSocketIdOnServer = async (userId: string, socketId: string) => {
-  const API_UPDATE_SOCKET_ID = `${process.env.NEXT_PUBLIC_NSM_API_BASE_URL}/v1/admins/${userId}/socket-id`;
+  const API_UPDATE_SOCKET_ID = `${process.env.NEXT_PUBLIC_API_BASE_URL}/v1/admins/${userId}/socket-id`;
   if (!socketId) {
     return;
   }

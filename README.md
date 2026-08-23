@@ -1,6 +1,9 @@
-# next-prod-setup
+# next-essential
 
 Minimal, prod-ready Next.js 16 boilerplate — essentials only. Built to be cloned via `degit` and extended, not bloated.
+
+[![CI](https://github.com/geraldAp/next-essential/actions/workflows/ci.yml/badge.svg)](https://github.com/geraldAp/next-essential/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/geraldAp/next-essential/blob/main/LICENSE)
 
 ## What is this?
 
@@ -17,14 +20,16 @@ Next.js 16.3.2 (Turbopack) · React 19 · Tailwind 4 · TypeScript · Yarn 4 (`n
 ## Use this template
 
 ```bash
-npx degit <you>/next-prod-setup my-app
+npx degit geraldAp/next-essential my-app
 cd my-app
 cp .env.example .env.local  # set SESSION_PASSWORD (32+ chars)
 yarn install
 yarn dev
+# pinned version: npx degit geraldAp/next-essential#main my-app
+# alt: npx giget gh:geraldAp/next-essential my-app
 ```
 
-Or GitHub: `Use this template` button.
+Or GitHub: [`Use this template`](https://github.com/geraldAp/next-essential/generate) button.
 
 Mock login: `admin@example.com` / `password123` (toggle `src/lib/utils/mock.ts` `ENABLE_MOCK`).
 

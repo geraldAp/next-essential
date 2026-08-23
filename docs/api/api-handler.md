@@ -17,7 +17,7 @@ type ApiResponse<T> = ApiSuccess<T> | ApiFailure;
 ```ts
 // src/lib/api/http.ts
 import http from "@/lib/api/http";
-http.defaults.baseURL = process.env.NEXT_PUBLICAPI_BASE_URL ?? process.env.API_BASE_URL;
+http.defaults.baseURL = process.env.NEXT_PUBLIC_API_BASE_URL ?? process.env.API_BASE_URL;
 ```
 
 Auth is injected **server-side** from iron-session unless `skipAuth: true`.
